@@ -11,15 +11,14 @@ version : 1
 models : 
     - name : stg_netflix__credits
       columns :
-        - name : id
-          test :
-            - unique
+        - name : '"id"'
+          tests :
             - not_null
-        - name : person_id
-          test :
+        - name : '"person_id"'
+          tests :
             - not_null
-        - name : role
-          test :
+        - name : '"role"'
+          tests :
             - accepted_values:
                 values: ['ACTOR','DIRECTOR']
               
