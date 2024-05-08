@@ -1,0 +1,27 @@
+################################################################
+# Test YML Created On - 2024/05/08 by Yash Upadhyaya
+# Added Test on 2024/05/08 by Yash Upadhyaya 
+#   - unique and not null to person_id
+#   - not null to id
+#   - accpeted value to role
+################################################################
+
+version : 1
+
+models : 
+    - name : stg_netflix__credits
+      columns :
+        - name : id
+          test :
+            - unique
+            - not_null
+        - name : person_id
+          test :
+            - not_null
+        - name : role
+          test :
+            - accepted_values:
+                values: ['ACTOR','DIRECTOR']
+              
+              
+              
