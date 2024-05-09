@@ -1,3 +1,13 @@
+/*
+################################################################
+# Test Sql Created On - 2024/05/09 by Yash Upadhyaya
+# Added Test on 2024/05/09 by Yash Upadhyaya
+# - Check in movie & show imbd and tmbd score is not less than 0
+# - Check in credits that person_id and id is not null
+# - Check in credits for dulpicates
+################################################################
+*/
+
 with movies as (
     select * from {{ source('netflix', 'TITLES') }}
 ),
