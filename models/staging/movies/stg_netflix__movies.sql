@@ -4,4 +4,4 @@
         database='DATA_FLICKS'
     )
 }}
-select * from {{ source('netflix', 'TITLES') }} where "type" = 'MOVIE'
+select * from {{ source('netflix', 'TITLES') }} where type = 'MOVIE'

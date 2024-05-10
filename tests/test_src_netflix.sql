@@ -17,7 +17,7 @@ credits as (
 )
 select * from (
 select IFF(sum(result) = 0,null,sum(result)) as result from (
-select count(*) result from movies where "imdb_score" < 0.0 or "tmdb_score" < 0.0
+select count(*) result from movies where imdb_score < 0.0 or tmdb_score < 0.0
 union
 select count(*) result from credits where "person_id" is null or "id" is null
 union
