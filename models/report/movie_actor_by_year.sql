@@ -7,7 +7,7 @@
 }}
 
 with movies as (
-select "id" movie_id,"release_year" as release_year,"title" as movie_name  from {{ ref('stg_netflix__movies') }}
+select id movie_id,release_year as release_year,title as movie_name  from {{ ref('stg_netflix__movies') }}
 ),
 
 credits as (

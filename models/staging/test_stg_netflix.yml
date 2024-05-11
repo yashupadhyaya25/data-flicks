@@ -28,20 +28,20 @@ models :
                 values: ['ACTOR','DIRECTOR']
     - name : stg_netflix__shows
       columns :
-        - name : '"id"'
+        - name : 'id'
           tests :
             - not_null
             - unique
-        - name : '"release_year"'
+        - name : 'release_year'
           tests : 
             - not_null
     - name : stg_netflix__movies
       columns :
-        - name : '"id"'
+        - name : 'id'
           tests :
             - not_null
             - unique
-        - name : '"release_year"'
+        - name : 'release_year'
           tests : 
             - not_null
             
