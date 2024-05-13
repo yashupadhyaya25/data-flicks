@@ -1,0 +1,11 @@
+semantic_models:
+  - name: sales
+    description: A record for every sale that takes place.
+    model: ref('stg_netflix__sale')
+    defaults:
+      agg_time_dimension: ORDERDATE
+    measures:
+    - name: sales_montly
+      agg: sum
+      create_metric: true
+    primary_entity: SALESORDERNUMBER
