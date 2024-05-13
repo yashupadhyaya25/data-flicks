@@ -1,0 +1,1 @@
+select * from {{ ref('actor_rating_by_total_movie') }} limit 10
