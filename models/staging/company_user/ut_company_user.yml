@@ -1,0 +1,16 @@
+version: 1
+
+unit_tests:
+  - name: email_validation
+    description: "Check valid email"
+    model: company_users
+    given:
+      - input: ref('company_user')  
+        rows:
+          - {login_email : cool@example.com}
+          - {login_email: cool@test.com}
+    expect: 
+      rows:
+        - {login_email: cool@example.com,    valid_email: true}
+        - {login_email: cool@test.com,    valid_email: false}
+      

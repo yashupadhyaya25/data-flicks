@@ -1,0 +1,28 @@
+semantic_models:
+  - name: sales
+    model: ref('stg_netflix__sale')
+    defaults:
+      agg_time_dimension: orderdate
+
+    entities:
+      - name: salesordernumber
+        type: primary
+    
+    dimensions:
+      - name: orderdate
+        type: time
+        type_params:
+          time_granularity: day
+
+    measures:
+      - name: total_unitprice
+        agg: sum
+        expr: UNITPRICE
+
+metrics:
+  - name: total_unitprice
+    type: simple
+    label: Total Unit Price
+    type_params:
+      measure : total_unitprice
+      
