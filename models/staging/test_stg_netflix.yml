@@ -44,8 +44,3 @@ models :
         - name : 'release_year'
           tests : 
             - not_null
-            
-            
-              
-              
-              
